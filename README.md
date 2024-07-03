@@ -8,13 +8,19 @@ Simple boilerplate for using webpack to bundle serverless function with third-pa
 #### NOTE: 
 There is a new beta which supports dependency management via a package.json file. See https://docs.google.com/document/d/e/2PACX-1vRGX60V2wQ2Co9X1NO73hkLObcQdNWp2i49XE-pY_DRS6UjZnv4UuODz4nsI_g1gUIXFC1MhN4AFsnZ/pub for more information
 
-## Installation
+## Installation (Not working)
+These are the original installation instructions, but webpack isn't working to build:
 1. `git clone` this repo
 2. `yarn install`
 3. If you're not yet set up with the [CMS CLI](https://designers.hubspot.com/tutorials/getting-started#quick_start) and have a specified `defaultPortal`, use `yarn hs init` to generate a CMS Personal Access Key.
 4. `yarn build` to build with webpack into `/dist`
 5. `yarn deploy` to build and deploy to `defaultPortal`
 6. `yarn start` to build, deploy, and watch/auto-upload to `defaultPortal`]
+
+## Installation (workaround)
+This is the workaround you can use to upload files to Hubspot:
+1. From the parent directory where you have `hubspot.config.yml` already set up, run `hs watch hubspot-webpack-serverless-exercise --initial-upload`
+2. Test the `hello-world` endpoint by making a `GET` request via Postman using this format: `https://{domainName}/_hcms/api/hello-world?name={yourName}`
 
 ### Additional setup for `/geolocation` endpoint
 1. In Hubspot, create a private app via Settings > Integrations > Private Apps, including scopes for reading/writing to users. Once created, copy your Access Token.

@@ -1,15 +1,15 @@
 {
   "runtime": "nodejs20.x",
   "version": "1.0",
-  "secrets": ["APIKEY"],
+  "secrets": ["HS_ACCESS_TOKEN", "IP_GEO_API_KEY"],
   "endpoints": {
-    "top-landing-pages": {
-      "method": "GET",
-      "file": "fetchLP.js"
-    },
     "hello-world": {
       "method": "GET",
       "file": "helloWorld.js"
+    },
+    "geolocation": {
+      "method": "POST",
+      "file": "geolocation.js"
     }
   }
 }

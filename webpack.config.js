@@ -6,7 +6,7 @@ const fxConfig = ({ portal, autoupload } = {}) => {
   return {
     target: "node",
     entry: {
-      fetchLP: ["./src/app.functions/fetchLP.js"],
+      geolocation: ["./src/app.functions/geolocation.js"],
       helloWorld: ["./src/app.functions/helloWorld.js"]
     },
     output: {
