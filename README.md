@@ -1,9 +1,14 @@
-# NOTE: There is a new beta which supports dependency management via a package.json file. See https://docs.google.com/document/d/e/2PACX-1vRGX60V2wQ2Co9X1NO73hkLObcQdNWp2i49XE-pY_DRS6UjZnv4UuODz4nsI_g1gUIXFC1MhN4AFsnZ/pub for more information
+# Description
 
-## CMS webpack-bundled serverless functions boilerplate [beta]
+This serverless function takes a form submission, gets geolocation data using IP address, and creates a contact in Hubspot. It was a technical exercise completed as part of my application to Aptitude 8.
+
+### Based on: CMS webpack-bundled serverless functions boilerplate [beta]
 Simple boilerplate for using webpack to bundle serverless function with third-party deps
 
-### Installation
+#### NOTE: 
+There is a new beta which supports dependency management via a package.json file. See https://docs.google.com/document/d/e/2PACX-1vRGX60V2wQ2Co9X1NO73hkLObcQdNWp2i49XE-pY_DRS6UjZnv4UuODz4nsI_g1gUIXFC1MhN4AFsnZ/pub for more information
+
+## Installation
 1. `git clone` this repo
 2. `yarn install`
 3. If you're not yet set up with the [CMS CLI](https://designers.hubspot.com/tutorials/getting-started#quick_start) and have a specified `defaultPortal`, use `yarn hs init` to generate a CMS Personal Access Key.
@@ -11,6 +16,8 @@ Simple boilerplate for using webpack to bundle serverless function with third-pa
 5. `yarn deploy` to build and deploy to `defaultPortal`
 6. `yarn start` to build, deploy, and watch/auto-upload to `defaultPortal`]
 
-### Additional setup for `/top-landing-pages` endpoint
-1. Via Settings > Integrations > API Key, copy your API key.
-2. Use `hs secrets add APIKEY < your api key here>` to give access to this key in your serverless functions via `process.env`. [Read more about this feature here](https://designers.hubspot.com/docs/developer-reference/local-development-cms-cli#serverless-commands).
+### Additional setup for `/geolocation` endpoint
+1. In Hubspot, create a private app via Settings > Integrations > Private Apps, including scopes for reading/writing to users. Once created, copy your Access Token.
+2. Use `hs secrets add HS_ACCESS_TOKEN` to give access to this key in your serverless functions via `process.env`. [Read more about this feature here](https://designers.hubspot.com/docs/developer-reference/local-development-cms-cli#serverless-commands).
+3. Obtain an API key from: https://ipgeolocation.io/
+4. Use `hs secrets add IP_GEO_API_KEY` to set this key.
