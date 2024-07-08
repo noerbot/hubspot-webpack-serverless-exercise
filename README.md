@@ -27,3 +27,11 @@ You can alternatively upload files to Hubspot using the Hubspot CLI:
 2. Use `hs secrets add HS_ACCESS_TOKEN` to give access to this key in your serverless functions via `process.env`. [Read more about this feature here](https://designers.hubspot.com/docs/developer-reference/local-development-cms-cli#serverless-commands).
 3. Obtain an API key from: https://ipgeolocation.io/
 4. Use `hs secrets add IP_GEO_API_KEY` to set this key.
+
+## Helpful Resources
+- [GitHub Repo: hubspot-webpack-serverless-exercise](https://github.com/noerbot/hubspot-webpack-serverless-exercise)
+- [Node package: Hubspot api-client](https://www.npmjs.com/package/@hubspot/api-client)
+    - [GitHub Repo: hubspot-api-nodejs](https://github.hubspot.com/hubspot-api-nodejs/)
+- [Hubspot API: Contacts](https://developers.hubspot.com/docs/api/crm/contacts)
+- [Hubspot CLI](https://developers.hubspot.com/docs/cms/developer-reference/local-development-cli)
+- [Hubspot Serverless Functions: Reference](https://developers.hubspot.com/docs/cms/data/serverless-functions/reference)
